@@ -94,8 +94,10 @@
   
 ## 2 실행 방법
 
+![](endpoint.png)
 
 ## 3 API 명세
+
 > 게시판 CRUD
 
 ### CREATE (게시판 생성)

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>제목 : {{board.subject}}</h1>
+<h2>작성자 : {{board.author.username}}</h2>
+<div>
+    내용 : {{board.content}}
+</div>
+<hr>
+{% if request.user == board.author %}
+<div>
+    <a href="{% url 'crud:board_modify' board.id %}">수정하기</a>
+    <a href="{% url 'crud:board_delete' board.id %}">삭제하기</a>
+</div>
+{% endif %}
+{% endblock %}
